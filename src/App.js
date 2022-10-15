@@ -1,8 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import Header from './components/Header';
+import { Layout } from './components';
 import Home from './page/Home';
-import Footer from './components/Footer';
 import { GlobalStyle, theme } from './config';
 
 function App() {
@@ -10,9 +9,9 @@ function App() {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Header />
-        <Home />
-        <Footer />
+        <Layout>
+          <Home />
+        </Layout>
       </ThemeProvider>
     </>
   );

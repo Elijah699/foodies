@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Flex } from './Flex';
+import { theme } from '../config';
+import { FlexBetween } from './Flex';
 import circle from '../constants/images/Ellipse 4.png';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <FooterContainer>
-      <Flex>
+      <FlexBetween>
         <div>
           <h6>Social Media</h6>
-          <Flex>
+          <div className="social-icons">
             <a href="/" aria-label="Just a test link">
               <img src={circle} alt="circle" />
             </a>
@@ -22,7 +23,7 @@ const Footer = () => {
             <a href="/" aria-label="Just a test link">
               <img src={circle} alt="circle" />
             </a>
-          </Flex>
+          </div>
         </div>
         <div>
           <h6>Quick links</h6>
@@ -41,7 +42,7 @@ const Footer = () => {
             <li>Download IOS</li>
           </ul>
         </div>
-      </Flex>
+      </FlexBetween>
 
       <div className="rights">
         <small>(c) foodies eatery 2022</small>
@@ -50,10 +51,44 @@ const Footer = () => {
   );
 };
 
-export default Footer;
-
 const FooterContainer = styled.div`
+  margin: ${theme.margin.xlg} ${theme.margin.xlg} ${theme.margin.md};
+  padding: ${theme.padding.xmd} ${theme.padding.md};
+
+  h6 {
+    font-size: ${theme.fontSizes.normalText};
+    font-weight: ${theme.fontWeight.bolder};
+    line-height: ${theme.lineHeights.normalText};
+  }
+
+  ul {
+    list-style: none;
+    padding-inline-start: 0;
+    margin-bottom: 0 !important;
+  }
+
+  li {
+    font-size: ${theme.fontSizes.smallText};
+    line-height: ${theme.lineHeights.smalltext};
+    color: ${theme.colors.gray200};
+    margin-top: ${theme.margin.sm};
+  }
+
+  .social-icons {
+    display: flex;
+
+    a {
+      margin-right: ${theme.margin.sm};
+
+      img {
+        width: 30px;
+      }
+    }
+  }
+
   .rights {
+    margin-top: ${theme.margin.lg};
     text-align: center;
+    color: ${theme.colors.gray200};
   }
 `;

@@ -1,6 +1,7 @@
 export const theme = {
   colors: {
     white: '#ffffff',
+    white200: '#f5f5f5',
     black: '#000000',
     black200: '#363636',
     black300: '#2F2F2F',
@@ -8,12 +9,14 @@ export const theme = {
     gray: '#A1A1A1',
     gray200: '#BEBEBE',
     gray300: '#FAFAFA',
+    gray400: '#737373',
+    gray500: '#BABABA',
     red: '#DF2519',
   },
   fonts: ['sans-serif', 'Lato', 'kaftanSerif'],
   fontSizes: {
-    bigTextOne: '60px',
-    bigTextTwo: '48px',
+    bigTextOne: '65px',
+    bigTextTwo: '45px',
     brandName: '36px',
     priceText: '32px',
     featureTitle: '24px',
@@ -44,6 +47,7 @@ export const theme = {
     xmd: '1.5rem',
     lg: '2rem',
     xlg: '3rem',
+    xxlg: '4rem',
   },
   margin: {
     sm: '0.5rem',
@@ -51,5 +55,6 @@ export const theme = {
     xmd: '1.5rem',
     lg: '2rem',
     xlg: '3rem',
+    xxlg: '4rem',
   },
 };

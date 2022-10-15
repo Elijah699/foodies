@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { theme } from '../config';
 import dot from '../constants/images/Ellipse 15.png';
 
-const Header = () => {
+export const Header = () => {
   return (
     <HeaderContainer>
       <h3>
@@ -20,9 +20,7 @@ const Header = () => {
   );
 };
 
-export default Header;
-
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.header`
   display: flex;
   margin: 0 ${theme.margin.xlg};
   padding: 0 ${theme.padding.md};
@@ -33,6 +31,7 @@ const HeaderContainer = styled.div`
     font-size: ${theme.fontSizes.brandName};
     font-weight: ${theme.lineHeights.brandName};
     color: ${theme.colors.blackTwo};
+    cursor: pointer;
 
     img {
       position: relative;
@@ -44,10 +43,20 @@ const HeaderContainer = styled.div`
   ul {
     margin-left: auto;
     display: flex;
+    align-items: center;
     list-style: none;
     font-family: ${theme.fonts[1]};
   }
 
   li {
+    margin: 0 ${theme.margin.md};
+    cursor: pointer;
+
+    &:last-child {
+      border: 1px solid ${theme.colors.red};
+      color: ${theme.colors.red};
+      border-radius: 13px;
+      padding: 13px 12px;
+    }
   }
 `;
